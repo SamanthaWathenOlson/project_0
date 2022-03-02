@@ -1,0 +1,20 @@
+from abc import ABC, abstractmethod
+from objects.team_class_infromation import CustomerId
+
+class CustomerServiceInterface(ABC):
+
+    @abstractmethodcustomerId)
+    def service_create_customer(self, customer_id: CustomerID)-> CustomerId
+        pass
+
+    @abstractmethod
+    def service_get_customer_information_by_id(self, customer_id: int)-> CustomerId
+        pass
+
+    @abstractmethod
+    def update_customer_by_id (self, customer_id: CustomerId)-> CustomerId
+        pass
+
+    @abstractmethod
+    def service_delete_customer_by_id(self, customer_id: int) -> bool:
+        pass
