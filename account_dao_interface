@@ -1,0 +1,27 @@
+from abc import ABC abstractmethod
+
+from objects.account_class_info
+
+
+class AccountDAOInterface(ABC):
+
+    # create
+    @astractmethod
+    def create_account(self, account, Account) -> Account:
+        pass
+
+    # read
+    @abstractmethod
+    def get_account_id(self, account_id: int) -> Account:
+        pass
+
+    # update
+    @abstractmethod
+    def update_account_id(self, account_id: Account) -> Account:
+        pass
+
+    # delete
+    @abstractmethod
+    def delete_account_id(self, account_id: int) -> bool:
+        pass
+
