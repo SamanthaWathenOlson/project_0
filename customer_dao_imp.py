@@ -4,7 +4,8 @@ from objects.customer_class_info import Customer
 
 
 class CustomerDAOImp(CustomerDAOInterface):
-    customer_list = [Customer(1, 1, "Samantha", "Wathen")]
+
+    customer_list = [Customer(1, 1, "Samantha", "Wathen", "Indianapolis,In")]
     id_generator = 2
 
     # Create
@@ -19,7 +20,7 @@ class CustomerDAOImp(CustomerDAOInterface):
         for customer in self.customer_list:
             if customer.customer_id == customer_id:
                 return customer
-        raise IdNotFound("No player matches the id given: please try again!")
+        raise IdNotFound("No customer matches the id given: please try again!")
 
     # Update
     def update_customer_by_id(self, customer: Customer) -> Customer:
@@ -27,12 +28,13 @@ class CustomerDAOImp(CustomerDAOInterface):
             if previous_customer.customer_id == customer.customer_id:
                 previous_customer = customer
                 return previous_customer
-        raise IdNotFound("No player matches the id given: please try again!")
+        raise IdNotFound("No customer matches the id given: please try again!")
 
     # Delete
-    def delete_cutomer_by_id(self, customer_id: int) -> bool:
-        for customer in self.customer_list
+    def delete_customer_by_id(self, customer_id: int) -> bool:
+        for customer in self.customer_list:
             if customer.customer_id== customer_id:
                 self.customer_list.remove(customer)
                 return True
-        raise IdNotFound("No player matches the id given: please try again!")
+        raise IdNotFound("No customer matches the id given: please try again!")
+
